@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180222124544) do
 
-  create_table "quotes", force: :cascade do |t|
+  create_table "quotes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "text"
     t.string "author"
     t.datetime "created_at", null: false

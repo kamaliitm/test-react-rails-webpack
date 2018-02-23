@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'webpacker'
 gem 'react-rails'
+gem 'twitter'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'mysql2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
