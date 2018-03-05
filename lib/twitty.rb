@@ -37,7 +37,9 @@ module Twitty
     def tweet_info(tweet)
       {
         "id" => tweet.id,
-        "text" => tweet.text
+        "text" => tweet.text,
+        "screen_name" => tweet.user.screen_name,
+        "name" => tweet.user.name
       }.to_json
     end
 
