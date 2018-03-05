@@ -3,7 +3,7 @@ module Twitty
   class << self
 
     def refresh_main_data
-      config.each do |category, celebs|
+      app_data.each do |category, celebs|
         celebs.each do |celeb|
           twitter.user_timeline(celeb).each do |tweet|
             redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet))
@@ -37,8 +37,12 @@ module Twitty
       ThirdParty.redis
     end
 
+    def app_data
+      config["app_data"]
+    end
+
     def categories
-      config["categories"]
+      app_data.keys
     end
 
     def tweet_info_key(category)
