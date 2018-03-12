@@ -9,7 +9,12 @@ module Twitty
             redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet))
           end
         end
-      end  
+      end
+      reload_cache
+    end
+
+    def reload_cache
+      cached_main_data(true)
     end
 
     def cached_main_data(forced=false)
