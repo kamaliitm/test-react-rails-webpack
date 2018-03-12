@@ -17,7 +17,7 @@ module Twitty
       cached_main_data(true)
     end
 
-    def cached_main_data(forced=false)
+    def cached_main_data(force=false)
       if force || redis.get("main_data").to_s.blank?
         redis.set("main_data", main_data)
       end
