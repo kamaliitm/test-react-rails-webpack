@@ -27,6 +27,10 @@ module Twitty
       end
     end
 
+    def categories
+      app_data.keys
+    end
+
     private
 
     def twitter
@@ -39,10 +43,6 @@ module Twitty
 
     def app_data
       config["app_data"]
-    end
-
-    def categories
-      app_data.keys
     end
 
     def tweet_info_key(category)
