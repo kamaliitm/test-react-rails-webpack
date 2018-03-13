@@ -21,6 +21,7 @@ module Twitty
       if force || redis.get("main_data").to_s.blank?
         redis.set("main_data", main_data)
       end
+      eval(redis.get('main_data'))
     end
 
     def main_data
