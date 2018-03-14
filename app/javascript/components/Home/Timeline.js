@@ -1,19 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Tweet from './Tweet'
+
 class Timeline extends React.Component {
   render () {
-    console.log(this.props.tweets)
     return (
       <div>
         <h3>{this.props.category}</h3>
-        {this.props.tweets.map(function(x){
-          let tweetInfo = JSON.parse(x)
+        {this.props.tweets.map(tweetInfoStr => {
+          let tweetInfo = JSON.parse(tweetInfoStr)
           return (
-            <div key={tweetInfo.id}>
-                <p>{tweetInfo.name}</p>
-                <p>{tweetInfo.text}</p>
-            </div>
+            <Tweet key={tweetInfo.id} tweet={tweetInfo} />
           )
         })}
       </div>
