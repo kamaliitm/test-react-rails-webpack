@@ -34,7 +34,6 @@ class Home extends React.Component {
     let { category, tweets } = this.state
     return (
       <div>
-        <p>Home Page</p>
         <Header tabs={this.props.categories} navClickHandler={this.loadTweets} />
         <div>
           <Timeline tweets={tweets} category={category} />
