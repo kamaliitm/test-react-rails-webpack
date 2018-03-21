@@ -12,7 +12,7 @@ class NavTab extends React.Component {
 
   render () {
     return (
-      <a onClick={this.handleClick.bind(this)}>{this.props.tabname}</a>  
+      <a onClick={this.handleClick.bind(this)}>{this.props.tabname}</a>
     );
   }
 }
