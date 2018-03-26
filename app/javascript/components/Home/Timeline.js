@@ -6,8 +6,7 @@ import Tweet from './Tweet'
 class Timeline extends React.Component {
   render () {
     return (
-      <div>
-        <h3>{this.props.category}</h3>
+      <div className="timeline">
         {this.props.tweets.map(tweetInfoStr => {
           let tweetInfo = JSON.parse(tweetInfoStr)
           return (

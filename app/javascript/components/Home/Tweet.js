@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 class Tweet extends React.Component {
   render () {
     return (
-      <div>
+      <div className="tweet">
         <p><u>{this.props.tweet.name}</u></p>
         <p>{this.props.tweet.text}</p>
         <hr/>
