@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Header from '../Common/Header/Header'
+import Header2 from '../Common/Header/Header2'
 import Timeline from './Timeline'
 
 class Home extends React.Component {
@@ -34,7 +34,7 @@ class Home extends React.Component {
     let { category, tweets } = this.state
     return (
       <div>
-        <Header tabs={this.props.categories} navClickHandler={this.loadTweets} />
+        <Header2 tabs={this.props.categories} navClickHandler={this.loadTweets} />
         <div>
           <Timeline tweets={tweets} category={category} />
         </div>
