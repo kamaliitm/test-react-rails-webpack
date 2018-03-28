@@ -15,8 +15,8 @@ class Header2 extends React.Component {
         <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerMainMenu">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
-              <a id="navbar-dropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-              <div className="dropdown-menu">
+              <a id="navbarDropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 {this.props.tabs.map((category, i) => {
                   return <NavTab2 key={i} tabId={i} tabname={category} loadTweets={this.props.navClickHandler}>{category}</NavTab2>
                 })}

@@ -33,7 +33,7 @@ class Home extends React.Component {
   render () {
     let { category, tweets } = this.state
     return (
-      <div>
+      <div className="container">
         <Header2 tabs={this.props.categories} navClickHandler={this.loadTweets} />
         <div>
           <Timeline tweets={tweets} category={category} />
