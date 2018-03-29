@@ -8,6 +8,7 @@ class NavTab extends React.Component {
 
   handleClick() {
     this.props.loadTweets(this.props.tabname);
+    this.props.setTab(this.props.tabname);
   }
 
   render () {
