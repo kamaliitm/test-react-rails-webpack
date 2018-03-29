@@ -1,16 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import NavTab2 from "./NavTab2"
+import NavTab from "./NavTab"
 
-class Header2 extends React.Component {
+class Header extends React.Component {
   constructor() {
     super();
   }
 
   render () {
     return (
-      <div className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-light">
         <a className="navbar-brand" href="/"><img src="/assets/twitter_logo_1.png" /></a>
         <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerMainMenu">
           <ul className="navbar-nav">
@@ -18,7 +18,7 @@ class Header2 extends React.Component {
               <a id="navbarDropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 {this.props.tabs.map((category, i) => {
-                  return <NavTab2 key={i} tabId={i} tabname={category} loadTweets={this.props.navClickHandler}>{category}</NavTab2>
+                  return <NavTab key={i} tabId={i} tabname={category} loadTweets={this.props.navClickHandler}>{category}</NavTab>
                 })}
               </div>
             </li>
@@ -29,4 +29,4 @@ class Header2 extends React.Component {
   }
 }
 
-export default Header2
+export default Header

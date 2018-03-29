@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-class NavTab2 extends React.Component {
+class NavTab extends React.Component {
   constructor() {
     super();
   }
@@ -17,4 +17,4 @@ class NavTab2 extends React.Component {
   }
 }
 
-export default NavTab2
+export default NavTab
