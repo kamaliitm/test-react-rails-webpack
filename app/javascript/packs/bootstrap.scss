@@ -1,1 +1,12 @@
 @import '~bootstrap/dist/css/bootstrap';
+
+.navbar-brand {
+  img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+.tweet {
+  padding: 15px;
+}

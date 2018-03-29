@@ -68,7 +68,8 @@ module Twitty
         "id" => tweet.id,
         "text" => tweet.text,
         "screen_name" => tweet.user.screen_name,
-        "name" => tweet.user.name
+        "name" => tweet.user.name,
+        "profile_image_url" => tweet.user.profile_image_url.to_s
       }.to_json
     end
 
