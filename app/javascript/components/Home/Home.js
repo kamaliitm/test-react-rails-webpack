@@ -35,9 +35,7 @@ class Home extends React.Component {
     return (
       <div className="container">
         <Header tabs={this.props.categories} navClickHandler={this.loadTweets} />
-        <div>
-          <Timeline tweets={tweets} category={category} />
-        </div>
+        <Timeline tweets={tweets} category={category} />
       </div>
     );
   }
