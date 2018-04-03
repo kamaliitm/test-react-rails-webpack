@@ -3,6 +3,18 @@ module Twitty
   class << self
 
     def refresh_main_data
+      clear_cached_tweets
+      load_main_data
+      reload_main_cache
+    end
+
+    def clear_cached_tweets
+      categories.each do |category|
+        redis.del(tweet_info_key(category))
+      end
+    end
+
+    def load_main_data
       app_data.each do |category, celebs|
         celebs.each do |celeb|
           twitter.user_timeline(celeb).each do |tweet|
@@ -10,10 +22,9 @@ module Twitty
           end
         end
       end
-      reload_cache
     end
 
-    def reload_cache
+    def reload_main_cache
       cached_main_data(true)
     end
 
