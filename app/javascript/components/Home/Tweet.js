@@ -8,7 +8,10 @@ class Tweet extends React.Component {
         <div className="media">
           <img className="mr-3" src={this.props.tweet.profile_image_url} alt="Profile Pic Thumbnail" />
           <div className="media-body">
-            <h5 className="mt-0"><u>{this.props.tweet.name}</u></h5>
+            <div className="mt-0">
+              <span className="d-inline user-name">{this.props.tweet.name}</span>
+              <span className="d-inline screen-name">@{this.props.tweet.screen_name}</span>
+            </div>
             {this.props.tweet.text}
           </div>
           <hr/>

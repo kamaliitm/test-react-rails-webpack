@@ -9,6 +9,17 @@
 
 .tweet {
   .media {
-    padding: 15px;
+    padding: 0.9rem;
+
+    .mt-0 {
+      span.user-name {
+	margin-right: 0.4rem;
+	font-size: 1.25rem;
+      }
+
+      span.screen-name {
+	font-size: 0.75rem;
+      }
+    }
   }
 }
