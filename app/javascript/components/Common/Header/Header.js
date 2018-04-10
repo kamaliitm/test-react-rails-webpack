@@ -26,7 +26,7 @@ class Header extends React.Component {
     let { currentTab } = this.state;
     return (
       <div className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-light">
-        <a className="navbar-brand" href="/"><img src="/assets/twitter_logo_1.png" /></a>
+        <a className="navbar-brand" href="/"><img src="/assets/twittycat.png" /></a>
         <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerMainMenu">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
