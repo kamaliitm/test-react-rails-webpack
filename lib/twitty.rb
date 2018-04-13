@@ -18,7 +18,7 @@ module Twitty
       app_data.each do |category, celebs|
         celebs.each do |celeb|
           twitter.user_timeline(celeb).each do |tweet|
-            redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet))
+            redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet)) unless tweet.retweet?
           end
         end
       end
