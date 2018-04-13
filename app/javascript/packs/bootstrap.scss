@@ -27,3 +27,11 @@
     }
   }
 }
+
+// Media Queries
+@media (min-width: 768px) {
+  .timeline {
+    max-width: 650px;
+    margin: auto;
+  }
+}
