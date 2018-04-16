@@ -28,7 +28,7 @@ class Header extends React.Component {
       <div className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-white fixed-top">
         <div className="container">
           <a className="navbar-brand" href="/"><img src="/assets/twittycat.png" /></a>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerMainMenu">
+          <div className="justify-content-end" id="navbarTogglerMainMenu">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
                 <a id="navbarDropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{currentTab}</a>

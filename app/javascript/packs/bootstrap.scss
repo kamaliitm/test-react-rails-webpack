@@ -1,9 +1,19 @@
 @import '~bootstrap/dist/css/bootstrap';
 
 .navbar-brand {
+  width: 50%;
+
   img {
-    width: 125px;
-    height: auto;
+    max-width: 100%;
+  }
+}
+
+.navbar {
+  .navbar-nav {
+    .dropdown-menu {
+      position: absolute;
+      left: -60px;
+    }
   }
 }
 
@@ -30,8 +40,8 @@
 
 // Media Queries
 @media (min-width: 768px) {
-  .timeline {
-    max-width: 650px;
-    margin: auto;
+  .container {
+    max-width: 750px;
   }
+
 }
