@@ -17,7 +17,7 @@ module Twitty
     def load_main_data
       app_data.each do |category, celebs|
         celebs.each do |celeb|
-          twitter.user_timeline(celeb).each do |tweet|
+          twitter.user_timeline(celeb, tweet_mode: 'extended').each do |tweet|
             redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet)) unless tweet.retweet?
           end
         end
@@ -77,7 +77,7 @@ module Twitty
     def tweet_info(tweet)
       {
         "id" => tweet.id,
-        "text" => tweet.text,
+        "text" => tweet.attrs[:full_text],
         "screen_name" => tweet.user.screen_name,
         "name" => tweet.user.name,
         "profile_image_url" => tweet.user.profile_image_url.to_s
