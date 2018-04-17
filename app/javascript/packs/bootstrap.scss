@@ -1,4 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 .navbar-brand {
   width: 50%;
@@ -22,6 +25,15 @@
 }
 
 .tweet {
+  &:hover {
+    background-color: $gray-200;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .media {
     padding: 0.9rem;
 

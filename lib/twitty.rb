@@ -80,7 +80,8 @@ module Twitty
         "text" => tweet.attrs[:full_text],
         "screen_name" => tweet.user.screen_name,
         "name" => tweet.user.name,
-        "profile_image_url" => tweet.user.profile_image_url.to_s
+        "profile_image_url" => tweet.user.profile_image_url.to_s,
+        "tweet_url" => tweet.url.to_s
       }.to_json
     end
 

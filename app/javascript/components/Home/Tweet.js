@@ -5,6 +5,7 @@ class Tweet extends React.Component {
   render () {
     return (
       <div className="tweet card card-block bg-faded">
+        <a href={this.props.tweet.tweet_url} target="_blank">
         <div className="media">
           <img className="mr-3" src={this.props.tweet.profile_image_url} alt="Profile Pic Thumbnail" />
           <div className="media-body">
@@ -16,6 +17,7 @@ class Tweet extends React.Component {
           </div>
           <hr/>
         </div>
+        </a>
       </div>
     )
   }
