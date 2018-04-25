@@ -77,12 +77,20 @@ module Twitty
     def tweet_info(tweet)
       {
         "id" => tweet.id,
-        "text" => tweet.attrs[:full_text],
+        "text" => get_formatted_text(tweet),
         "screen_name" => tweet.user.screen_name,
         "name" => tweet.user.name,
         "profile_image_url" => tweet.user.profile_image_url.to_s,
         "tweet_url" => tweet.url.to_s
       }.to_json
+    end
+
+    def get_formatted_text(tweet)
+      raw_text = tweet.attrs[:full_text]
+      tweet.user_mentions.collect{|um| um.screen_name}.uniq.each do |screen_name|
+        raw_text.gsub!(/@#{screen_name}/, "<a href='https://www.twitter.com/#{screen_name}' target='_blank'>@#{screen_name}</a>")
+      end
+      raw_text
     end
 
   end
