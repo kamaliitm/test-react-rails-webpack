@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Header from '../Common/Header/Header'
-import Timeline from './Timeline'
+import TwittyTimeline from './TwittyTimeline'
 
 class Home extends React.Component {
   constructor() {
@@ -35,7 +35,7 @@ class Home extends React.Component {
     return (
       <div className="container">
         <Header tabs={this.props.categories} navClickHandler={this.loadTweets} />
-        <Timeline tweets={tweets} category={category} />
+        <TwittyTimeline tweets={tweets} category={category} />
       </div>
     );
   }
