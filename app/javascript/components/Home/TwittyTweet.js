@@ -9,14 +9,9 @@ class TwittyTweet extends React.Component {
   }
 
   render () {
-    let tweetIdString = this.props.tweet.id.toString();
-    console.log("Tweet id from props: ", this.props.tweet.id.toString());
-    console.log("Tweet id: ", tweetIdString);
     return (
       <div className="tweet card card-block bg-faded">
-          <div className="media">
-            <Tweet tweetId={`${this.props.tweet.id}`} options={{maxwidth: 550}} />
-          </div>
+        <Tweet tweetId={`${this.props.tweet.id}`} options={{maxwidth: 550}} />
       </div>
     )
   }

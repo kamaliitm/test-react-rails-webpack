@@ -76,7 +76,7 @@ module Twitty
 
     def tweet_info(tweet)
       {
-        "id" => tweet.id,
+        "id" => tweet.id.to_s,
         "text" => get_formatted_text(tweet),
         "screen_name" => tweet.user.screen_name,
         "name" => tweet.user.name,
