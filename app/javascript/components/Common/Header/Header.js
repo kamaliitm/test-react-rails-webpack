@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Capitalize } from "../../../helpers/Util"
 import NavTab from "./NavTab"
 
 class Header extends React.Component {
@@ -31,10 +32,10 @@ class Header extends React.Component {
           <div className="justify-content-end" id="navbarTogglerMainMenu">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
-                <a id="navbarDropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{currentTab}</a>
+                <a id="navbarDropdown" className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{Capitalize(currentTab)}</a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {this.props.tabs.map((category, i) => {
-                    return <NavTab key={i} tabId={i} tabname={category} loadTweets={this.props.navClickHandler} setTab={this.setCurrentTab}>{category}</NavTab>
+                    return <NavTab key={i} tabId={i} tabname={category} loadTweets={this.props.navClickHandler} setTab={this.setCurrentTab} />
                   })}
                 </div>
               </li>

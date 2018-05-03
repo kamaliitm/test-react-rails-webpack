@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Capitalize } from "../../../helpers/Util"
+
 class NavTab extends React.Component {
   constructor() {
     super();
@@ -13,7 +15,7 @@ class NavTab extends React.Component {
 
   render () {
     return (
-      <a className="dropdown-item" onClick={this.handleClick.bind(this)}>{this.props.tabname}</a>
+      <a className="dropdown-item" onClick={this.handleClick.bind(this)}>{Capitalize(this.props.tabname)}</a>
     );
   }
 }
