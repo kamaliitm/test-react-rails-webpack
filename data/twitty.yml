@@ -1,5 +1,5 @@
 app_data:
-  tollywood: ["RGVzoomin", "ssrajamouli", "Rakulpreet"]
-  bollywood: ["SrBachchan", "RajeevMasand"]
-  cricket: ["sachin_rt", "ImRaina", "imVkohli"]
-  football: ["mattspiro", "bbcsport_david"]
+  tollywood: <%= %w(RGVzoomin ssrajamouli Rakulpreet sivakoratala urstrulyMahesh iamnagarjuna tarak9999 ActorPRABHA purijagan aryasukku nameisnani PawanKalyan Samanthaprabhu2 TheDeverakonda RaviTeja_offl AkhilAkkineni8 chay_akkineni MsKajalAggarwal alluarjun Ileana_Official actor_nithiin idlebrainjeevi devakatta RanaDaggubati ramsayz) %>
+  bollywood: <%= %w(SrBachchan RajeevMasand) %>
+  cricket: <%= %w(sachin_rt ImRaina imVkohli) %>
+  football: <%= %w(mattspiro bbcsport_david) %>
