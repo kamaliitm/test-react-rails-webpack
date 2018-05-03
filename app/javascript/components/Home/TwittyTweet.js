@@ -10,8 +10,8 @@ class TwittyTweet extends React.Component {
 
   render () {
     return (
-      <div className="tweet card card-block bg-faded">
-        <Tweet tweetId={`${this.props.tweet.id}`} options={{maxwidth: 550}} />
+      <div className="card card-block bg-faded">
+        <Tweet tweetId={`${this.props.tweet.id}`} options={{width: 'auto'}} />
       </div>
     )
   }

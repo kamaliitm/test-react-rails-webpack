@@ -22,32 +22,12 @@
 
 .timeline {
   padding-top: 70px;
+  max-width: 520px;
+  margin: auto;
 }
 
-.tweet {
-  &:hover {
-    background-color: $gray-200;
-  }
-
-  a.tweet-body, a.tweet-body:hover, a.tweet-body:visited {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .media {
-    padding: 0.9rem;
-
-    .mt-0 {
-      span.user-name {
-	margin-right: 0.4rem;
-	font-size: 1.25rem;
-      }
-
-      span.screen-name {
-	font-size: 0.75rem;
-      }
-    }
-  }
+twitterwidget.twitter-tweet.twitter-tweet-rendered {
+  margin: 0 auto !important;
 }
 
 // Media Queries
