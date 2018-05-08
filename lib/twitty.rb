@@ -71,8 +71,9 @@ module Twitty
     end
 
     def get_score(tweet)
-      tweet_age = [Time.now - tweet.created_at, 1].max
-      (tweet.retweet_count * tweet.favorite_count).to_f / (tweet_age ** 2)
+      # tweet_age = [Time.now - tweet.created_at, 1].max
+      # (tweet.retweet_count * tweet.favorite_count).to_f / (tweet_age ** 2)
+      tweet.created_at.to_i
     end
 
     def tweet_info(tweet)
