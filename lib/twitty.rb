@@ -15,13 +15,18 @@ module Twitty
     end
 
     def load_main_data
+      start_time = Time.now.to_i
       app_data.each do |category, celebs|
+        puts "Category: #{category}"
         celebs.each do |celeb|
+          puts "Fetching for celeb: #{celeb}"
           twitter.user_timeline(celeb, tweet_mode: 'extended').each do |tweet|
             redis.zadd(tweet_info_key(category), get_score(tweet), tweet_info(tweet)) unless tweet.retweet?
           end
         end
       end
+      time_taken = Time.now.to_i - start_time
+      puts "Time taken: #{time_taken}s"
     end
 
     def reload_main_cache
